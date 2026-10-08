@@ -76,13 +76,15 @@ int main() {
   assert(float_almost_equal(9, get_minutes(3600 + 60 * 9)));
   std::printf("all tests have passed.\n");
 
-  /*
-   * WIP
+
   std::printf("\t\tfunction: get_seconds\n");
-
+  assert(float_almost_equal(0, get_seconds(60)));
+  assert(float_almost_equal(20, get_seconds(3800)));
+  assert(float_almost_equal(0, get_seconds(3600)));
+  assert(float_almost_equal(5, get_seconds(125)));
+  assert(float_almost_equal(59, get_seconds(59)));
+  assert(float_almost_equal(33, get_seconds(3600 + 60 * 9 + 33)));
   std::printf("all tests have passed.\n");
-
-  */
 
   return 0;
 }

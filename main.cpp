@@ -4,7 +4,9 @@
 #include <cmath>
 #include <iostream>
 
-// bool float_almost_equal(double a, double b){}
+bool float_almost_equal(double a, double b) {
+  return fabs(a - b) <= DBL_EPSILON;
+}
 
 int main() {
   std::cout << "\t\tfunction: seconds_difference" << std::endl;

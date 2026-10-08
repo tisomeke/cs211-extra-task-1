@@ -106,3 +106,32 @@ int main() {
 
   return 0;
 }
+
+
+/* OUTPUT LOG
+ * 
+ 		function: seconds_difference
+all tests have passed.
+
+		function: hours_difference
+all tests have passed.
+
+		function: to_float_hours
+all tests have passed.
+
+		function: to_24_hour_clock
+all tests have passed.
+		function: get_hours
+all tests have passed.
+		function: get_minutes
+all tests have passed.
+		function: get_seconds
+all tests have passed.
+		function: time_to_utc
+all tests have passed.
+		function: time_from_utc
+all tests have passed.
+
+⏵ Task `Build & Run` finished successfully
+
+ */

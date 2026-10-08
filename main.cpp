@@ -17,7 +17,7 @@ int main() {
   assert(float_almost_equal(seconds_difference(-5.0, -5.0), 0.0));
   assert(float_almost_equal(seconds_difference(-50.0, 50.0), 100.0));
   assert(float_almost_equal(seconds_difference(0.0, 0.12345), 0.12345));
-  std::cout << "all asserts have passed.\n" << std::endl;
+  std::cout << "all tests have passed.\n" << std::endl;
 
   std::cout << "\t\tfunction: hours_difference" << std::endl;
   assert(float_almost_equal(hours_difference(1.0, 1.0), 0.0));
@@ -27,7 +27,7 @@ int main() {
   assert(float_almost_equal(hours_difference(-5.0, -5.0), 0.0 / 3600));
   assert(float_almost_equal(hours_difference(-50.0, 50.0), 100.0 / 3600));
   assert(float_almost_equal(hours_difference(0.0, 0.12345), 0.12345 / 3600));
-  std::cout << "all asserts have passed.\n" << std::endl;
+  std::cout << "all tests have passed.\n" << std::endl;
 
   std::cout << "\t\tfunction: to_float_hours" << std::endl;
   assert(float_almost_equal(to_float_hours(1, 0, 0), 1.0));
@@ -41,7 +41,7 @@ int main() {
                             (50.0 + 50.0 / 60.0 + 50.0 / 3600.0)));
   assert(float_almost_equal(to_float_hours(59, 59, 59),
                             (59.0 + 59.0 / 60.0 + 59.0 / 3600.0)));
-  std::cout << "all asserts have passed.\n" << std::endl;
+  std::cout << "all tests have passed.\n" << std::endl;
 
   std::printf("\t\tfunction: to_24_hour_clock\n");
   assert(float_almost_equal(0.0, to_24_hour_clock(0.0)));
@@ -57,7 +57,7 @@ int main() {
   assert(float_almost_equal(0.111, to_24_hour_clock(0.111)));
   assert(float_almost_equal(23.0, to_24_hour_clock(3 * 24.0 + 23.0)));
 
-  std::printf("all asserts have passed.\n");
+  std::printf("all tests have passed.\n");
 
   return 0;
 }

@@ -93,5 +93,9 @@ double time_from_utc(int utc_offset, double time) {
       >>> time_from_utc(+1, 23.0)
       0.0
   */
-  return 0;
+  auto result{fmod(time + utc_offset, 24.0)};
+  if (result < 0.0) {
+    result += 24.0;
+  }
+  return result;
 }

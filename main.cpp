@@ -59,5 +59,24 @@ int main() {
 
   std::printf("all tests have passed.\n");
 
+  std::printf("\t\tfunction: get_hours\n");
+  assert(float_almost_equal(0, get_hours(0)));
+  assert(float_almost_equal(1, get_hours(3600)));
+  assert(float_almost_equal(4, get_hours(3600*4)));
+  assert(float_almost_equal(1, get_hours(3600*2 - 1)));
+  assert(float_almost_equal(10, get_hours(3600*10 + 3599)));
+  std::printf("all tests have passed.\n");
+  /*
+   * WIP
+   std::printf("\t\tfunction: get_minutes\n");
+
+   std::printf("all tests have passed.\n");
+
+   std::printf("\t\tfunction: get_minutes\n");
+
+   std::printf("all tests have passed.\n");
+
+   */
+
   return 0;
 }

@@ -27,27 +27,6 @@ double to_24_hour_clock(double hours) {
   return fmod(hours, 24);
 }
 
-/*
-    Implement three functions
-        * get_hours
-        * get_minutes
-        * get_seconds
-    They are used to determine the hours part, minutes part and seconds part
-    of a time in seconds. E.g.:
-
-    >>> get_hours(3800)
-    1
-
-    >>> get_minutes(3800)
-    3
-
-    >>> get_seconds(3800)
-    20
-
-    In other words, if 3800 seconds have elapsed since midnight,
-    it is currently 01:03:20 (hh:mm:ss).
-*/
-
 int get_hours(int seconds) { return seconds / 3600; }
 
 int get_minutes(int seconds) {
@@ -66,33 +45,6 @@ double time_to_utc(int utc_offset, double time) {
 }
 
 double time_from_utc(int utc_offset, double time) {
-  /*
-      Return UTC time in time zone utc_offset.
-
-      >>> time_from_utc(+0, 12.0)
-      12.0
-
-      >>> time_from_utc(+1, 12.0)
-      13.0
-
-      >>> time_from_utc(-1, 12.0)
-      11.0
-
-      >>> time_from_utc(+6, 6.0)
-      12.0
-
-      >>> time_from_utc(-7, 6.0)
-      23.0
-
-      >>> time_from_utc(-1, 0.0)
-      23.0
-
-      >>> time_from_utc(-1, 23.0)
-      22.0
-
-      >>> time_from_utc(+1, 23.0)
-      0.0
-  */
   auto result{fmod(time + utc_offset, 24.0)};
   if (result < 0.0) {
     result += 24.0;

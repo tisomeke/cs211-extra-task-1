@@ -43,5 +43,21 @@ int main() {
                             (59.0 + 59.0 / 60.0 + 59.0 / 3600.0)));
   std::cout << "all asserts have passed.\n" << std::endl;
 
+  std::printf("\t\tfunction: to_24_hour_clock\n");
+  assert(float_almost_equal(0.0, to_24_hour_clock(0.0)));
+  assert(float_almost_equal(0.0, to_24_hour_clock(24.0)));
+  assert(float_almost_equal(0.0, to_24_hour_clock(24.0 * 2)));
+  assert(float_almost_equal(0.0, to_24_hour_clock(24.0 * 3)));
+  assert(float_almost_equal(0.0, to_24_hour_clock(24.0 * 4)));
+
+  assert(float_almost_equal(1.5, to_24_hour_clock(1.5)));
+  assert(float_almost_equal(5.5, to_24_hour_clock(24.0 + 5.5)));
+  assert(float_almost_equal(5.5, to_24_hour_clock(5.5)));
+  assert(float_almost_equal(2.5, to_24_hour_clock(24.0 + 2.5)));
+  assert(float_almost_equal(0.111, to_24_hour_clock(0.111)));
+  assert(float_almost_equal(23.0, to_24_hour_clock(3 * 24.0 + 23.0)));
+
+  std::printf("all asserts have passed.\n");
+
   return 0;
 }

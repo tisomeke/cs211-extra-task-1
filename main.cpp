@@ -87,8 +87,6 @@ int main() {
 
   std::printf("\t\tfunction: time_to_utc\n");
   assert(float_almost_equal(time_to_utc(+0, 12.0), 12.0));
-  // assert(float_almost_equal(time_to_utc(+1, 12.0), 11.0);
-  // Unterminated function-like macro invocation (clang unterm_macro_invoc)
   assert(float_almost_equal(time_to_utc(-1, 12.0), 13.0));
   assert(float_almost_equal(time_to_utc(-11, 18.0), 5.0));
   assert(float_almost_equal(time_to_utc(-1, 0.0), 1.0));

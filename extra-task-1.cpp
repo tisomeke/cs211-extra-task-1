@@ -14,29 +14,15 @@ double to_float_hours(int hours, int minutes, int seconds) {
   assert(seconds >= 0);
   assert(minutes < 60);
   assert(minutes >= 0);
-
   assert(hours >= 0);
-  /*
-      Return the total number of hours in the specified number
-      of hours, minutes, and seconds.
 
-      Precondition: 0 <= minutes < 60  and  0 <= seconds < 60
-
-      >>> to_float_hours(0, 15, 0)
-      0.25
-
-      >>> to_float_hours(2, 45, 9)
-      2.7525
-
-      >>> to_float_hours(1, 0, 36)
-      1.01
-  */
   double sec_to_hours{static_cast<double>(seconds) / 3600.0};
   double min_to_hours{static_cast<double>(minutes) / 60.0};
   return static_cast<double>(hours) + min_to_hours + sec_to_hours;
 }
 
 double to_24_hour_clock(double hours) {
+    
   /*
       hours is a number of hours since midnight. Return the
       hour as seen on a 24-hour clock.

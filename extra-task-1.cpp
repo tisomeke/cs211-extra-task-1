@@ -11,10 +11,11 @@ double hours_difference(double time_1, double time_2) {
 
 double to_float_hours(int hours, int minutes, int seconds) {
   assert(seconds < 60);
-  assert(seconds >= 60);
+  assert(seconds >= 0);
   assert(minutes < 60);
-  assert(minutes < 60);
+  assert(minutes >= 0);
 
+  assert(hours >= 0);
   /*
       Return the total number of hours in the specified number
       of hours, minutes, and seconds.
@@ -30,7 +31,9 @@ double to_float_hours(int hours, int minutes, int seconds) {
       >>> to_float_hours(1, 0, 36)
       1.01
   */
-  return 0;
+  double sec_to_hours{static_cast<double>(seconds) / 3600.0};
+  double min_to_hours{static_cast<double>(minutes) / 60.0};
+  return static_cast<double>(hours) + min_to_hours + sec_to_hours;
 }
 
 double to_24_hour_clock(double hours) {
